@@ -81,7 +81,7 @@ plotly>=5.14.0
 
 ### Running the Application
 
-```bash
+```Linux bash or Windows command window
 python test_pi.py
 ```
 
