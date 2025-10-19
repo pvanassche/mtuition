@@ -3,6 +3,7 @@
 An interactive application for simulating and visualizing the behaviour of a PI controller with real-time parameter adjustment.
 
 ![Python](https://img.shields.io/badge/python-3.11+-blue.svg)
+![License](https://img.shields.io/badge/license-MIT-green.svg)
 
 ## Overview
 
@@ -69,6 +70,7 @@ pip install -r requirements.txt
 
 ### requirements.txt
 ```
+pywebview
 nicegui>=1.4.0
 numpy>=1.24.0
 scipy>=1.10.0
