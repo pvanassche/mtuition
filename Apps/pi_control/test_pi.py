@@ -282,7 +282,10 @@ def main_page():
                 ui.icon('analytics', size='2.5rem').classes('text-purple-600')
                 with ui.column().classes('gap-1 flex-grow'):
                     ui.label('PI Control — Simulation').classes('text-3xl font-bold text-gray-800')
-                ui.html('<span class="mtuition-1">m</span><span class="mtuition-2">tuition</span>')
+                try:
+                    ui.html('<span class="mtuition-1">m</span><span class="mtuition-2">tuition</span>', sanitize=False)
+                except:
+                    ui.html('<span class="mtuition-1">m</span><span class="mtuition-2">tuition</span>')
         
         with ui.row().classes('w-full gap-3').style('align-items: stretch'):
             # Control Panel
@@ -411,6 +414,5 @@ app.native.settings['ALLOW_DOWNLOADS'] = True
 app.native
 
 # Run the app
-#ui.run(title='PI Simulator', port=8080, favicon='📊')
-ui.run(title='PI Simulator', window_size=(1300, 950), native=True, reload=False)
-
+ui.run(title='PI Simulator', port=8080, favicon='📊', reload=False)
+#ui.run(title='PI Simulator', window_size=(1300, 950), native=True, reload=False)
